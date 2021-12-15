@@ -12,6 +12,7 @@ body,html{
     background-size: cover;
     position: relative;
   }
+
   /* Navbar */
   .topnav {
     overflow: hidden;
@@ -45,6 +46,10 @@ body,html{
     transform: translate(-50%, -50%);
     color: white;
     font-family: "Nova Round";
+    font-size: 50px;
+    float: left;
+  }
+  .hero-text p{
     font-size: 30px;
   }
   .hero-text a{
@@ -68,32 +73,76 @@ body,html{
   #firstB:hover{
     background: #916BBF;
   }
-/* Exclusive Products */
-.Epro h1{
-      text-align: center;
-      font-size: 30px;
-  }
-.product{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+/* Top Selling Products */
+.featured-products {
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
 }
-.EProducts {
-    display: inline-block ;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: 15px;
-    text-align: center;
-    font-family: arial;
-    background-color: #916BBF;
-    color: black;
-  }
-  
-.price {
-    color: black;
-    font-size: 22px;
-  }
 
-  footer{
-    background-color: black;
+@media (max-width: 1000px) {
+  .featured-products {
+      grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 800px) {
+  .featured-products {
+      grid-template-columns: 1fr;
+  }
+}
+
+.featured-products-title {
+  text-align: center;
+}
+
+.featured-product-item {
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+.featured-product-item-image {
+  height: 355px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.featured-product-item > .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.featured-product-item > .description {
+  color: #666;
+}
+
+.featured-product-item > .price {
+  font-style: italic;
+}
+
+button {
+  outline: none;
+  background: black;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Products Page */
+h1{
+  text-align: center;
+}
